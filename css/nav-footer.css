@@ -45,9 +45,9 @@ nav {
     background-color: #000001;
 }
 
-.navbar-toggler-icon {
-    /* This might be needed for the toggle icon in the navbar */
-}
+/* .navbar-toggler-icon {
+  
+} */
 
 /* Footer styles */
 .footer {
@@ -113,3 +113,6 @@ nav {
 .footer-social a:hover {
     color: #985FF9;
 }
+
+/* Scrollbar customization */
+/* Your scrollbar styles go here */
