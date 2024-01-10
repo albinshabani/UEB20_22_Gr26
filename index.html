@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/nav-footer.css">
     <title>Travel Agency</title>
     
 </head>
@@ -16,49 +17,50 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="date_and_time.js"></script>
+    <script src="greeting.js"></script>
 
    
 
 
     <!-- HEADER -->
     <header>
-   <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+   <nav class="navbar navbar-expand-lg">
     <div class="container">
         <a class="navbar-brand" href="index.html">
-            <img src="./Logos (Icons)/travelagency_logo2.png" alt="Travel Agency Logo" width="60" height="auto">
+            <img id="logo"src="./Logos (Icons)/travelagency_logo2.png" alt="Travel Agency Logo" width="60" height="auto">
             <b>TRAVEL AGENCY</b>
         </a>
 
         <!-- Navbar Toggle Button for small screens -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"><img src="./Logos (Icons)/navbar-toggle-icon.png" alt="Navbar Toggle Icon"></span>
         </button>
 
         <!-- Navbar Links -->
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="./index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="destinations.html">Destinations</a>
+                    <a class="nav-link" href="./destinations.html">Destinations</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="packages.html">Packages</a>
+                    <a class="nav-link" href="./packages.html">Packages</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about.html">About Us</a>
+                    <a class="nav-link" href="./about.html">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
+                    <a class="nav-link" href="./contact.html">Contact</a>
                 </li>
             </ul>
 
             <!-- Search Form -->
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
             </form>
         </div>
     </div>
@@ -87,12 +89,13 @@
     </section>
     <!-- SERVICES -->
     <section class="services">
+        <h2><b>Our Services</b></h2>
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="./images/flight-booking.jpg" class="card-img-top" alt="Flight Booking">
-                        <div class="card-body">
+                            <img src="./images/flight-booking.jpg" class="card-img-top" alt="Flight Booking">
+                         <div class="card-body">
                             <h5 class="card-title">Flight Booking</h5>
                             <p class="card-text">Book your flights with ease and travel to your dream destinations.</p>
                         </div>
@@ -129,29 +132,45 @@
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img class="d-block w-100" src="./images/paris.jpg" alt="First slide">
             <div class="carousel-caption d-none d-md-block">
-                <h5 style="font-size: 75px;">PARIS</h5>
-                <p>"Paris, the City of Light, captivates with its timeless elegance and enchanting allure. From iconic landmarks like the Eiffel Tower to the charming cobblestone streets of Montmartre, every corner whispers tales of romance and artistry.""
-                </p>
+                <h5>PARIS</h5>
               </div>
           </div>
           <div class="carousel-item">
             <img class="d-block w-100" src="./images/new york.jpg" alt="Second slide">
             <div class="carousel-caption d-none d-md-block">
-                <h5 style="font-size: 75px;">NEW YORK</h5>
-                <p>"New York, the city that never sleeps, pulsates with energy and ambition. Skyscrapers pierce the skyline, and Central Park offers an urban oasis amidst the bustling streets. "</p>
+                <h5>NEW YORK</h5>
+                
               </div>
             
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="./images/tokyo.jpg" alt="Third slide">
+                <img class="d-block w-100" src="./images/tokyo.jpg" alt="Third slide">
             <div class="carousel-caption d-none d-md-block">
-                <h5 style="font-size: 75px;">TOKYO</h5>
-                <p>"Tokyo, a city where tradition and modernity coalesce in a mesmerizing blend. From the serene beauty of cherry blossoms in Ueno Park to the vibrant chaos of Shibuya Crossing, Tokyo is a city of contrasts."</p>
+                <h5>TOKYO</h5>
+              </div>
+          </div>
+
+          <div class="carousel-item">
+            <img class="d-block w-100" src="./images/rome.jpg" alt="Fourth slide">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>ROME</h5>
+                
+              </div>
+          </div>
+
+          <div class="carousel-item">
+            <img class="d-block w-100" src="./images/madrid.jpg" alt="Fifth slide">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>MADRID</h5>
+            
               </div>
           </div>
         </div>
@@ -166,11 +185,13 @@
       </div>
 
     </section>
+
+
     <section>
         <div class=""></div>
     </section>
     <section>
-        <table align="center"
+        <table class="table1" align="center"
                 cellspacing="4px">
             <tr>
               <th>Country</th>
@@ -232,6 +253,7 @@
 
 
     </section>
+    
 
    <!-- FOOTER -->
     <footer class="footer">
@@ -242,11 +264,11 @@
                 </div>
                 <div class="footer-links">
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#destinations">Destinations</a></li>
-                        <li><a href="#packages">Packages</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
@@ -272,7 +294,6 @@
 
     </footer>
 
-    
 </body>
 
 </html>
