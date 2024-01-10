@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="./css/nav-footer.css">
         <title>Travel Agency</title>
     </head>
 <body>
@@ -12,10 +13,11 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
+    <script src="date_and_time.js"></script>
+    
     <!-- HEADER -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+        <nav class="navbar navbar-expand-lg">
          <div class="container">
              <a class="navbar-brand" href="index.html">
                  <img src="./Logos (Icons)/travelagency_logo2.png" alt="Travel Agency Logo" width="60" height="auto">
@@ -25,7 +27,7 @@
              <!-- Navbar Toggle Button for small screens -->
              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                 <span class="navbar-toggler-icon"></span>
+                 <span class="navbar-toggler-icon"><img src="./Logos (Icons)/navbar-toggle-icon.png" alt="Navbar Toggle Icon"></span>
              </button>
      
              <!-- Navbar Links -->
@@ -51,54 +53,91 @@
                  <!-- Search Form -->
                  <form class="form-inline my-2 my-lg-0">
                      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                     <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                     <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
                  </form>
              </div>
          </div>
      </nav>
      </header>
 
+
+     <!-- NESTED LIST-->
+     <div id="background">
+<div class="offers">
+     <ul>
+        <li>Tropical Getaway:</li>
+        <ul>
+            <li>Enjoy a 7-night all-inclusive vacation in the beautiful Maldives. Package includes flights, accommodation in a beachfront villa, daily breakfast, and snorkeling trips. Prices start from $1,999 per person.</li>
+        </ul>
+        <li>European Discovery:
+            <ul>
+                <li>Explore the best of Europe with a 10-day guided tour. Visit iconic cities like Paris, Rome, and Barcelona. Package includes flights, accommodation, guided tours, breakfast, and transportation between cities. Prices start from $2,499 per person.</li>
+            </ul>
+        </li>
+        <li>Adventure in Costa Rica:</li> 
+            <ul>
+                <li>Experience the thrill of Costa Rica's diverse landscapes. Enjoy activities like zip-lining, volcano hikes, and relaxing on pristine beaches. Package includes flights, accommodation, daily breakfast, and guided tours. Prices start from $1,799 per person.</li>
+            </ul>
+    </ul>
+</div>
+</div>
      <!-- PACKAGES -->
-    <section class="package" id="italy-package">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h2>Italy Explorer</h2>
-                    <div class="card">
-                        <img src="./images/italy.jpg" class="card-img-top" alt="Italy">
-                        <div class="card-body">
-                            <h5 class="card-title">Explore the beauty of Italy</h5>
-                            <p class="card-text">Discover historic ruins, art, and the romantic canals of Venice.</p>
-                        </div>
-                    </div>
-            </div>
+<section class="package" id="italy-package">
+    <div class="container">
+        <div class="row">
+            <!-- Italy Package -->
             <div class="col-md-4">
-                <h2>Japan Discovery</h2>
                 <div class="card">
-                    <img src="./images/japan.jpg" class="card-img-top" alt="Japan">
+                    <a href="./Packages/italy-explorer.html"><img src="./images/italy.jpg" class="card-img-top" alt="Italy">
                     <div class="card-body">
-                        <h5 class="card-title">Experience the best of Japan</h5>
-                        <p class="card-text">From modern Tokyo to historic Kyoto, indulge in a cultural adventure.</p>
+                        <h2 class="card-title">Italy Explorer</h2>
+                        <p class="card-text">Discover historic ruins, art, and the romantic canals of Venice.</p>
+                        <h5 class="card-title">Price: $2500</h5>
+                        <p class="card-text">📌 Italy</p>
+                        <p class="card-text">Duration: 7 days</p>
+                    </a> 
                     </div>
                 </div>
             </div>
 
+            <!-- Japan Package -->
             <div class="col-md-4">
-                <h2>Costa Rica Eco Adventure</h2>
-            <div class="card">
-                <img src="./images/costa-rica.jpg" class="card-img-top" alt="Costa Rica">
-                <div class="card-body">
-                    <h5 class="card-title">Immerse yourself in Costa Rica's nature</h5>
-                    <p class="card-text">Explore rainforests, relax in hot springs, and enjoy beautiful beaches.</p>
+                <div class="card">
+                    <a href="./Packages/japan-discovery.html">
+                        <img src="./images/japan.jpg" class="card-img-top" alt="Japan">
+                    <div class="card-body">
+                        <h2 class="card-title">Japan Discovery</h2>
+                        <p class="card-text">From modern Tokyo to historic Kyoto, indulge in a cultural adventure.</p>
+                        <h5 class="card-title">Price: $3000</h5>
+                        <p class="card-text">📌 Japan</p>
+                        <p class="card-text">Duration: 10 days</p>
+                    </div>
+                    </a>
+                    
                 </div>
             </div>
+
+            <!-- Costa Rica Package -->
+            <div class="col-md-4">
+                <div class="card">
+                    <a href="./Packages/costarica-eco-adventure.html">
+                        <img src="./images/costa-rica.jpg" class="card-img-top" alt="Costa Rica">
+                    <div class="card-body">
+                        <h2 class="card-title">Costa Rica Eco Adventure</h2>
+                        <p class="card-text">Explore rainforests, relax in hot springs, and enjoy beautiful beaches.</p>
+                        <h5 class="card-title">Price: $2800</h5>
+                        <p class="card-text">📌 Costa Rica</p>
+                        <p class="card-text">Duration: 8 days</p>
+                    </div>
+                    </a>
+                    
+                </div>
             </div>
         </div>
-    </section>
-
+    </div>
+</section>
   
-  
-   
+     
 
    
 
@@ -134,6 +173,7 @@
                     </ul>
                 </div>
             </div>
+            <div id="currentDate">DATE</div>
             <p>&copy; 2023 Travel Agency. All rights reserved.</p>
         </div>
     </footer>
