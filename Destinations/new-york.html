@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/nav-footer.css">
+    <link rel="stylesheet" href="../css/destinations2.css"> <!-- Use the same destination.css file for consistency -->
+    <title>New York - Travel Agency</title>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="../date_and_time.js"></script>
+
+    <header>
+        <nav class="navbar navbar-expand-lg">
+         <div class="container">
+             <a class="navbar-brand" href="../index.html">
+                 <img id="logo"src="../Logos (Icons)/travelagency_logo2.png" alt="Travel Agency Logo" width="60" height="auto">
+                 <b>TRAVEL AGENCY</b>
+             </a>
+     
+             <!-- Navbar Toggle Button for small screens -->
+             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                 <span class="navbar-toggler-icon"><img src="../Logos (Icons)/navbar-toggle-icon.png" alt="Navbar Toggle Icon"></span>
+             </button>
+     
+             <!-- Navbar Links -->
+             <div class="collapse navbar-collapse" id="navbarNav">
+                 <ul class="navbar-nav ml-auto">
+                     <li class="nav-item">
+                         <a class="nav-link" href="../index.html">Home</a>
+                     </li>
+                     <li class="nav-item">
+                         <a class="nav-link" href="../destinations.html">Destinations</a>
+                     </li>
+                     <li class="nav-item">
+                         <a class="nav-link" href="../packages.html">Packages</a>
+                     </li>
+                     <li class="nav-item">
+                         <a class="nav-link" href="../about.html">About Us</a>
+                     </li>
+                     <li class="nav-item">
+                         <a class="nav-link" href="../contact.html">Contact</a>
+                     </li>
+                 </ul>
+     
+                 <!-- Search Form -->
+                 <form class="form-inline my-2 my-lg-0">
+                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                     <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+                 </form>
+             </div>
+         </div>
+     </nav>
+     </header>
+
+    <!-- Destination Section -->
+    <section class="destination">
+        <div class="container">
+            <h1>New York - The City That Never Sleeps</h1>
+            <img src="../images/new york.jpg" alt="New York" class="destination-image">
+            <div class="details">
+                <p><strong>Experience the energy and diversity of New York with our exclusive travel package.</strong></p>
+                <p>From iconic skyscrapers to Broadway shows, New York offers an unforgettable adventure for every traveler.</p>
+                <ul>
+                    <li>Explore famous landmarks like Times Square, Central Park, and the Statue of Liberty.</li>
+                    <li>Enjoy world-class dining, shopping, and cultural attractions in the city.</li>
+                    <li>Witness breathtaking views from the top of the Empire State Building.</li>
+                    <li>Stay in luxurious accommodations in the heart of Manhattan.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section class="highlights">
+        <div class="container">
+            <h2>Highlights of New York</h2>
+            <ul>
+                <li>Times Square: Experience the vibrant atmosphere of this iconic entertainment hub.</li>
+                <li>Central Park: Relax in the beautiful greenery of this expansive urban park.</li>
+                <li>Statue of Liberty: Take a ferry to visit this symbol of freedom and democracy.</li>
+                <li>Broadway Shows: Enjoy world-class theater productions in the Theater District.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Book Now Section -->
+    <div class="book-now">
+        <h2>Book Your New York Adventure Now!</h2>
+        <p>Don't miss the chance to explore the city that never sleeps. Book your travel package today!</p>
+        <a href="../contact.html" class="btn btn-dark">Contact Us to Book</a>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="../index.html"><img src="../Logos (Icons)/travelagency_logo2.png" alt="Footer Logo"></a>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../destinations.html">Destinations</a></li>
+                        <li><a href="../packages.html">Packages</a></li>
+                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <p><a href="mailto:info@travelagency.com">Email: info@travelagency.com</a></p>
+                    <p>Phone: +1 (123) 456-7890</p>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img src="../Logos (Icons)/facebook logo.png" alt="Facebook"></a></li>
+                        <li><a href="https://www.instagram.com/?hl=en" target="_blank" rel="noopener noreferrer"><img src="../Logos (Icons)/instagram logo.png" alt="Instagram"></a></li>
+                        <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><img src="../Logos (Icons)/youtube.png" alt="Youtube"></a></li>
+                        <li><a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><img src="../Logos (Icons)/x_logo.png" alt="Twitter"></a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div id="currentDate">DATE</div>
+            <p>&copy; 2023 Travel Agency. All rights reserved.</p>
+            
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
