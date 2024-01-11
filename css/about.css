@@ -237,12 +237,12 @@ header #logo {
 }
 
 /* Footer Container */
-.footer .container {
+/* .footerr .container {
   display: flex;
-  /* justify-content: space-between; */
-  /* align-items: center; */
-  /* flex-wrap: wrap; */
-}
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+} */
   
 /* ... (rest of your styles) ... */
 
@@ -263,12 +263,24 @@ nav {
   height: 50px;
 }
 
+/* footer style */
+
+
 .footer {
   background-color: var(--header-footer-bg);
   color: var(--text-color);
   padding: 0;
- 
+  max-width: 100%;
 }
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 99%;
+  margin: 0 auto;
+}
+
 
 .footer-content {
   display: flex;
