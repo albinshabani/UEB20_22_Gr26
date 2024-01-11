@@ -7,6 +7,8 @@
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="./css/nav-footer.css">
         <title>Travel Agency</title>
+        
+
     </head>
 <body>
 
@@ -66,37 +68,47 @@
         <source src="./videos/sea.mp4" type="video/mp4">
     </video>
      
-        <div class="forms">
-            <form onsubmit="handleSubmit(event)">   
+    <div class="forms">
+        <form action="mailto:travelagency@email.com" method="post" enctype="text/plain">
             <label for="fname">First name:</label><br>
-            <input type="text" id="fname" name="fname"><br>
+            <input type="text" id="fname" name="fname" required autocomplete="given-name"><br>
+    
             <label for="lname">Last name:</label><br>
-            <input type="text" id="lname" name="lname"><br>
-            <label for="pass">Password: </label><br>
-            <input id="password" type="password"></form>
-            
-            <label>Enter country you wish to travel: </label> <br>
-            <input list="country" id="countryinput" />
+            <input type="text" id="lname" name="lname" required autocomplete="family-name"><br>
+    
+            <label for="countryinput">Enter country you wish to travel:</label> <br>
+            <input list="country" id="countryinput" name="country" autocomplete="country">
             <!--datalist Tag starts here -->
             <datalist id="country">
-                <option value="Japan" >
-                <option value="New York" >
-                <option value="France" >
-                <option value="Italy" >
-                <option value="Spain" >
+                <option value="Japan">
+                <option value="New York">
+                <option value="France">
+                <option value="Italy">
+                <option value="Spain">
             </datalist>
             <br>
-
+    
             <label for="flight">Flight Type:</label><br>
-            <input type="radio" name="in-bound">In-Bound</input>
-            <input type="radio" name="out-bound">Out-Bound</input><br>
-
+            <input type="radio" name="flight-type" id="in-bound" required>
+            <label for="in-bound">In-Bound</label>
+            <input type="radio" name="flight-type" id="out-bound" required>
+            <label for="out-bound">Out-Bound</label><br>
+    
             <label for="email">Email:</label><br>
-            <input type="email"></input><br>
-
+            <input type="email" id="email" name="email" required autocomplete="email"><br>
+    
+            <label for="question">Any specific question or request?</label><br>
+            <textarea id="question" name="question" rows="4" cols="50" required></textarea><br>
+    
             <input type="submit" value="Submit">
-            </form>
-        </div>
+        </form>
+    </div>
+    
+    
+    
+    
+    <!-- </div> -->
+    
         
         
 
