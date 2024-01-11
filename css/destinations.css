@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Rubik', sans-serif;
+}
+
+header #logo {
+    filter: invert(100%);
+}
+
+.destinations-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.destination {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-basis: calc(33.33% - 40px);
+    margin-bottom: 20px;
+}
+
+.destination img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.destination-info {
+    margin-top: 20px;
+}
+
+.destination:hover {
+    transform: scale(1.05);
+    color: white;
+    outline-style: solid;
+    outline-color: #000001;
+    outline-width: small;
+}
+
+.destination h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.destination p {
+    font-size: 1em;
+    color: #555;
+}
+
+.destination-list h2 {
+    color: #000001;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.featured_destination {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: auto;
+    height: auto;
+}
+
+.featured_destination img {
+    width: 80%;
+    object-fit:cover;
+    border-radius: 10px;
+    display:inline-flex;
+}
+
+.featured_destination-info {
+    margin-top: 20px;
+}
+
+
+.featured_destination h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.featured_destination p {
+    font-size: 1em;
+    color: #555;
+}
+
+#prevButton,
+#nextButton {
+    cursor: pointer;
+    background-color: #000001;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 100px;
+    
+}
+
+#prevButton:hover,
+#nextButton:hover {
+    background-color: #fff;
+    color: black;
+}

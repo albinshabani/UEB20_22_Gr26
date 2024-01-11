@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    
+    background-color: var(--text-color);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+}
+
+.destination {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.destination h1 {
+    color: white;
+}
+
+.destination-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.details {
+    margin-top: 20px;
+}
+
+.details p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.details li {
+    margin-bottom: 10px;
+}
+
+.highlights {
+    text-align: center;
+    background-color: #fff;
+    padding: 40px 0;
+    margin-top: 20px;
+}
+
+.highlights h2 {
+    color: black;
+}
+
+
+
+.highlights ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.highlights li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.book-now {
+    text-align: center;
+    background-color: var(--text-color);
+    color: #fff;
+    padding: 40px 0;
+}
+
+.book-now h2 {
+    margin-bottom: 20px;
+}
+
+.btn-dark {
+    background-color: #343a40;
+    color: #fff;
+}
+
+.footer .container{
+    display: flex;
+}
+
+/* Additional styles for responsive design can be added as needed */
