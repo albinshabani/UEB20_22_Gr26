@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Planner</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #1c1f1dc4;
+            overflow: hidden; /* to hide the overflowing video */
+        }
+
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .planner {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            z-index: 1;
+            position: relative;
+        }
+
+        .list {
+            flex: 1;
+            padding: 10px;
+            min-height: 200px;
+            margin: 0 10px;
+            border: 2px dashed #ffa500;
+        }
+
+        .list-item {
+            background-color: #ffa500;
+            color: #ffffff;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<video autoplay muted loop class="background-video">
+    <source src="./videos/sea.mp4" type="video/mp4">
+</video>
+
+<div class="planner">
+    <div class="list" id="all-places" ondrop="drop(event, 'all-places')" ondragover="allowDrop(event)">
+        <h2>All Places</h2>
+        <div class="list-item" data-place="Paris, France" draggable="true" ondragstart="drag(event)">Paris, France</div>
+        <div class="list-item" data-place="Tokyo, Japan" draggable="true" ondragstart="drag(event)">Tokyo, Japan</div>
+        <div class="list-item" data-place="New York City, USA" draggable="true" ondragstart="drag(event)">New York City, USA</div>
+        <div class="list-item" data-place="Santorini, Greece" draggable="true" ondragstart="drag(event)">Santorini, Greece</div>
+        <div class="list-item" data-place="Alps, Switzerland" draggable="true" ondragstart="drag(event)">Alps, Switzerland</div>
+        <div class="list-item" data-place="Bora Bora, French Polynesia" draggable="true" ondragstart="drag(event)">Bora Bora, French Polynesia</div>
+        <div class="list-item" data-place="Kyoto, Japan" draggable="true" ondragstart="drag(event)">Kyoto, Japan</div>
+        <div class="list-item" data-place="Barcelona, Spain" draggable="true" ondragstart="drag(event)">Barcelona, Spain</div>
+        <div class="list-item" data-place="Sydney, Australia" draggable="true" ondragstart="drag(event)">Sydney, Australia</div>
+    </div>
+
+    <div class="list" id="summer" ondrop="drop(event, 'summer')" ondragover="allowDrop(event)">
+        <h2>Summer Places</h2>
+    </div>
+
+    <div class="list" id="winter" ondrop="drop(event, 'winter')" ondragover="allowDrop(event)">
+        <h2>Winter Places</h2>
+    </div>
+</div>
+
+<script>
+    let draggedItem = null;
+
+    function allowDrop(event) {
+        event.preventDefault();
+    }
+
+    function drag(event) {
+        draggedItem = event.target;
+        setTimeout(function () {
+            event.target.style.display = 'none';
+        }, 0);
+    }
+
+    function drop(event, category) {
+        event.preventDefault();
+        draggedItem.style.display = 'block';
+
+        const destinationList = document.getElementById(category);
+        destinationList.appendChild(draggedItem);
+
+        if (category !== 'all-places') {
+            // If the destination is not "All Places", remove from "All Places" list
+            const allPlacesList = document.getElementById('all-places');
+            allPlacesList.removeChild(draggedItem);
+        }
+        else {
+            // If the destination is "All Places", add a click event listener
+            draggedItem.addEventListener('click', function () {
+                document.getElementById('all-places').appendChild(draggedItem);
+                draggedItem.style.display = 'block';
+                draggedItem.removeEventListener('click', null);
+            });
+        }
+    }
+</script>
+
+</body>
+</html>
