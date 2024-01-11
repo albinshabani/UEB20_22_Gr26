@@ -7,7 +7,24 @@
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="./css/nav-footer.css">
         <title>Travel Agency</title>
-        
+        <style>
+            .content-container {
+                position: relative;
+            }
+    
+            .forms {
+            border: 5px solid;
+            margin: auto;
+            width: 50%;
+            padding: 40px;
+            background-color: whitesmoke;
+            position: absolute;
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%); /* Center the form */
+            }
+            
+        </style>
 
     </head>
 <body>
@@ -18,6 +35,7 @@
     <script src="date_and_time.js"></script>
     <script src="script.js"></script>
     
+    <div class="content-container">
     <!-- HEADER -->
     <header>
         <nav class="navbar navbar-expand-lg">
@@ -104,12 +122,10 @@
         </form>
     </div>
     
+     <audio controls autoplay class="audio-controls">
+        <source src="./audio/beach.mp3" type="audio/mp3">
+    </audio>
     
-    
-    
-    <!-- </div> -->
-    
-        
         
 
         <p id="output"></p>
@@ -123,11 +139,9 @@
         </script>
     
         
-    <audio controls autoplay class="audio-controls">
-        <source src="./audio/beach.mp3" type="audio/mp3">
-    </audio>
+   
         
-        
+    </div>
     </body>
 
       <!-- FOOTER -->
