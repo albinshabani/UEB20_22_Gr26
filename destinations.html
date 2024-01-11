@@ -5,97 +5,280 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/nav-footer.css">
+    <link rel="stylesheet" href="./css/nav-footer.css">
+
+    <link rel="stylesheet" href="./css/destinations.css">
+
     <title>Destinations</title>
+    <style>
+        #slideshow {
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        #slideshow img {
+            max-width: 80%;
+            height: auto;
+            
+        }
+
+        .slideshow-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-59.5%);
+        background-color: #000;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        height: 80%;
+        
+        }
+
+        #prevButton {
+        left: 50px;
+        }
+
+        #nextButton {
+        right: 50px;
+        }
+
+        /* .featured_destination {
+            display: none;
+        } */
+
+        
+       
+
+    </style>
 </head>
-
 <body>
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="date_and_time.js"></script>
+    <script>
+         document.addEventListener('DOMContentLoaded', function () {
+            var currentIndex = 0;
+            var featuredDestinations = document.querySelectorAll('.featured_destination');
 
+            function showDestination(index) {
+                featuredDestinations.forEach(function (featuredDestination, i) {
+                    featuredDestination.style.display = i === index ? 'block' : 'none';
+                });
+            }
 
-    <!-- HEADER -->
-    <header>
-   <nav class="navbar navbar-expand-lg navbar-dark bg-black">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">
-            <img src="./Logos (Icons)/travelagency_logo2.png" alt="Travel Agency Logo" width="60" height="auto">
-            <b>TRAVEL AGENCY</b>
-        </a>
+            function nextDestination() {
+                currentIndex = (currentIndex + 1) % featuredDestinations.length;
+                showDestination(currentIndex);
+            }
 
-        <!-- Navbar Toggle Button for small screens -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            function prevDestination() {
+                currentIndex = (currentIndex - 1 + featuredDestinations.length) % featuredDestinations.length;
+                showDestination(currentIndex);
+            }
 
-        <!-- Navbar Links -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="destinations.html">Destinations</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="packages.html">Packages</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-            </ul>
+            // Initial display
+            showDestination(currentIndex);
 
-            <!-- Search Form -->
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </div>
-    </div>
-</nav>
+            // Add event listeners for next and previous buttons
+            document.getElementById('nextButton').addEventListener('click', nextDestination);
+            document.getElementById('prevButton').addEventListener('click', prevDestination);
+        });
+    </script>
+
+    
+      <!-- HEADER -->
+<header>
+    <nav class="navbar navbar-expand-lg">
+     <div class="container">
+        <div>
+         <a class="navbar-brand" href="index.html">
+             <img src="./Logos (Icons)/travelagency_logo2.png" alt="Travel Agency Logo" width="60" height="auto">
+             <b>TRAVEL AGENCY</b>
+         </a>
+         </div>
+ 
+         <!-- Navbar Toggle Button for small screens -->
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"><img src="./Logos (Icons)/navbar-toggle-icon.png" alt="Navbar Toggle Icon"></span>
+         </button>
+ 
+         <!-- Navbar Links -->
+         <div class="collapse navbar-collapse" id="navbarNav">
+             <ul class="navbar-nav ml-auto">
+                 <li class="nav-item">
+                     <a class="nav-link" href="./index.html">Home</a>
+                 </li>
+                 <li class="nav-item">
+                     <a class="nav-link" href="./destinations.html">Destinations</a>
+                 </li>
+                 <li class="nav-item">
+                     <a class="nav-link" href="./packages.html">Packages</a>
+                 </li>
+                 <li class="nav-item">
+                     <a class="nav-link" href="./about.html">About Us</a>
+                 </li>
+                 <li class="nav-item">
+                     <a class="nav-link" href="./contact.html">Contact</a>
+                 </li>
+             </ul>
+ 
+             <!-- Search Form -->
+             <form class="form-inline my-2 my-lg-0">
+                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                 <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+             </form>
+         </div>
+     </div>
+ </nav>
 </header>
 
-   <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <a href="index.html"><img src="./Logos (Icons)/travelagency_logo2.png" alt="Footer Logo"></a>
-                </div>
-                <div class="footer-links">
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#destinations">Destinations</a></li>
-                        <li><a href="#packages">Packages</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contact Info</h4>
-                    <p><a href="mailto:info@travelagency.com">Email: info@travelagency.com</a></p>
-                    <p>Phone: +1 (123) 456-7890</p>
-                </div>
-                <div class="footer-social">
-                    <h4>Follow Us</h4>
-                    <ul>
-                        <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img src="./Logos (Icons)/facebook logo.png" alt="Facebook"></a></li>
-                        <li><a href="https://www.instagram.com/?hl=en" target="_blank" rel="noopener noreferrer"><img src="Logos (Icons)/instagram logo.png" alt="Instagram"></a></li>
-                        <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><img src="./Logos (Icons)/youtube.png" alt="Youtube"></a></li>
-                        <li><a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><img src="./Logos (Icons)/x_logo.png" alt="Twitter"></a></li>
-                        
-                    </ul>
-                </div>
-            </div>
-            <p>&copy; 2023 Travel Agency. All rights reserved.</p>
-        </div>
-    </footer>
-</body>
+ <!-- Slideshow section -->
+ <section id="slideshow">
 
+    <button id="prevButton" class="slideshow-btn">Previous</button>
+    <button id="nextButton" class="slideshow-btn">Next</button>
+    <!-- Add your slideshow content here -->
+    <div class="featured_destination">
+        <a href="./Destinations/paris.html"><img src="./images/paris.jpg" alt="paris"></a>
+        <div class="destination-info">
+            <h3>Paris, France</h3>
+            <p>Explore the romantic streets of the City of Light, visit the iconic Eiffel Tower, and enjoy the art and culture of this beautiful city.</p>
+        </div>
+    </div>
+
+    <div class="featured_destination">
+        <a href="./Destinations/new-york.html"><img src="./images/new york.jpg" alt="New York"></a>
+        <div class="destination-info">
+            <h3>New York City, USA</h3>
+            <p>Experience the vibrant energy of the city that never sleeps, visit Times Square, Central Park, and explore the diverse neighborhoods.</p>
+        </div>
+    </div>
+
+    <div class="featured_destination">
+        <a href="./Destinations/tokyo.html"><img src="./images/tokyo.jpg" alt="Tokyo"></a>
+        <div class="destination-info">
+            <h3>Tokyo, Japan</h3>
+            <p>Immerse yourself in the unique blend of tradition and modernity, witness cherry blossoms in Ueno Park, and discover the bustling streets of Shibuya.</p>
+        </div>
+    </div>
+
+</section>
+
+    <section class="destinations-grid">
+        
+    
+        <div class="destination">
+            <a href="./Destinations/rome.html" style="text-decoration: none;">
+                <img src="./images/rome.jpg" alt="Rome">
+            <div class="destination-info">
+                <h3>Rome, Italy</h3>
+                <p>Explore the historical treasures of the Eternal City, including the Colosseum, Roman Forum, and the Vatican City with its stunning St. Peter's Basilica.</p>
+            </div>
+            </a>
+            
+        </div>
+
+        <div class="destination">
+            <a href="./Destinations/cape-town.html" style="text-decoration: none;">
+                <img src="./images/cape_town.jpg" alt="Cape Town">
+                <div class="destination-info">
+                    <h3>Cape Town, South Africa</h3>
+                    <p>Enjoy the breathtaking landscapes of Table Mountain, visit Robben Island, and experience the vibrant culture and wildlife in this South African gem.</p>
+                </div></a>
+            
+        </div>
+
+        <div class="destination">
+            <a href="./Destinations/sydney.html" style="text-decoration: none;">
+                <img src="./images/sydney.jpg" alt="Sydney">
+                <div class="destination-info">
+                    <h3>Sydney, Australia</h3>
+                    <p>Discover the iconic Sydney Opera House, relax on Bondi Beach, and explore the vibrant culture and diverse wildlife of Australia.</p>
+                </div>
+            </a>
+           
+        </div>
+
+        <div class="destination">
+            <a href="./Destinations/dubai.html" style="text-decoration: none;">
+                <img src="./images/dubai.jpg" alt="Dubai">
+                <div class="destination-info">
+                <h3>Dubai, United Arab Emirates</h3>
+                <p>Immerse yourself in the opulence of Dubai, where modern luxury meets traditional charm. Visit the iconic Burj Khalifa, explore the extravagant shopping malls, and experience the unique blend of cultural richness and futuristic architecture.</p>
+            </div>
+            </a>
+            
+        </div>
+
+        <div class="destination">
+            <a href="./Destinations/madrid.html" style="text-decoration: none;">
+                <img src="./images/madrid.jpg" alt="Madrid">
+                <div class="destination-info">
+                    <h3>Madrid, Spain</h3>
+                    <p>Discover the vibrant capital of Spain, Madrid, known for its rich history and lively atmosphere. Explore world-class museums like the Prado, stroll through the elegant Retiro Park, and indulge in the city's culinary delights and vibrant nightlife.</p>
+                </div>
+            </a>
+           
+        </div>
+
+        <div class="destination">
+            <a href="./Destinations/rio.html" style="text-decoration: none;">
+                <img src="./images/rio.jpg" alt="Rio De Janiero">
+                <div class="destination-info">
+                    <h3>Rio de Janeiro, Brazil</h3>
+                    <p>Experience the energy and passion of Rio de Janeiro, nestled between lush mountains and beautiful beaches. Witness the grandeur of the Christ the Redeemer statue, dance to the rhythms of samba during Carnival, and relax on the iconic Copacabana and Ipanema beaches.</p>
+                </div>
+            </a>
+           
+        </div>
+
+        
+
+        
+
+
+    </section>
+
+    <!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="index.html"><img src="./Logos (Icons)/travelagency_logo2.png" alt="Footer Logo"></a>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#packages">Packages</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Info</h4>
+                <p><a href="mailto:info@travelagency.com">Email: info@travelagency.com</a></p>
+                <p>Phone: +1 (123) 456-7890</p>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img src="./Logos (Icons)/facebook logo.png" alt="Facebook"></a></li>
+                    <li><a href="https://www.instagram.com/?hl=en" target="_blank" rel="noopener noreferrer"><img src="Logos (Icons)/instagram logo.png" alt="Instagram"></a></li>
+                    <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><img src="./Logos (Icons)/youtube.png" alt="Youtube"></a></li>
+                    <li><a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><img src="./Logos (Icons)/x_logo.png" alt="Twitter"></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div id="currentDate">DATE</div>
+        <p>&copy; 2023 Travel Agency. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
 </html>
