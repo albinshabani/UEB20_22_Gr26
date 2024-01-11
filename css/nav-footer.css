@@ -137,3 +137,23 @@ nav {
 #currentDate {
     color:black;
 }
+
+@media (max-width: 767px){
+    .footer-links,
+    .footer-contact,
+    .footer-logo{
+        display:none;
+    }
+
+    #currentDate{
+        display: none;
+    }
+    .footer-social{
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer p{
+        display: none;
+    }
+}
