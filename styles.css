@@ -288,24 +288,23 @@
     }
 
     .background-video {
-        position: absolute;
+        position: static;
         top: 0;
         left: 0;
         width: 100%;
-        height: 100vh;
+        height: 100%;
         z-index: -1;
     }
 
     .forms {
-        position: relative;
         border: 5px solid;
-        margin: 20px auto;
-        max-width: 80%;
-        padding: 20px;
+        margin: auto;
+        width: 50%;
+        padding: 10px;
+        transform: translateY(-150%);
         background-color: whitesmoke;
-        z-index: 1;
     }
-    
+
 .audio-controls {
     width: 0;
     height: 0;
